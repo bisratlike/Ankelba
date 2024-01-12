@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankelba</title>
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        @media only screen and (max-width:640px) {
+            body {
+                background: url('images/team.jpg');
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <header
+        class="bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 text-white py-12 flex justify-between items-center p-10">
+        <section class="pt-12">
+            <i class="text-4xl">Ankelba</i>
+        </section>
+        <section class="hidden lg:flex items-center space-x-3 pt-12 justify-center">
+            <a href="home.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Home</a>
+            <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+            <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-center justify-center">User's
+                Dashboard</a>
+            <a href="about.html" class="w-24 hover:bg-green-600 flex items-center justify-center">About us</a>
+            <a href="contact.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Contact</a>
+        </section>
+        <section class="hidden lg:flex space-x-3 pt-12">
+            <a href="login.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Login</a>
+            <a href="signup.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Sign up</a>
+        </section>
+        <section class="lg:hidden flex flex-col items-end">
+            <button id="hamburger" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <div class="hidden flex flex-col items-end space-y-2" id="mobile-links">
+                <a href="home.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Home</a>
+                <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+                <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-start mr-12">User's
+                    Dashboard</a>
+                <a href="about.html" class="w-24 hover-bg-green-600 flex items-start mr-12">About us</a>
+                <a href="contact.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Contact</a>
+                <a href="login.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Login</a>
+                <a href="signup.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Sign up</a>
+            </div>
+        </section>
+    </header>
+    <div class="flex justify-center items-center ">
+        <section class="w-full md:w-1/2 lg:w-2/5 xl:w-2/5 sm:w-1/2 flex flex-col items-center justify-center  mr-5 ">
+            <section class="w-full md:w-1/3 lg:w-3/5 sm:w-1/2 flex flex-col items-center justify-center max-w-sm">
+                <h1 class="text-center font-bold text-2xl mb-8 mt-3">Login</h1>
+                <input type="email" id="emailInput" placeholder="Email"
+                    class="bg-gray-200 placeholder-black mb-5 p-2 rounded-md w-full text-center">
+                <input type="password" id="passwordInput" placeholder="Password"
+                    class="bg-gray-200 placeholder-black mb-5 p-2 rounded-md w-full text-center">
+                <button id="loginBtn" class="bg-green-500 text-white p-1 pl-3 pr-3 mt-7 max-w-sm rounded-md"
+                    onclick="login()">Login</button>
+                <a class="mt-3 mb-12 pb-12" href="signup.html">Don't you have account?</a>
+            </section>
+        </section>
+        <section class="w-1/2 lg:w-3/5 xl:w-3/5 md:w-1/2 sm:w-1/2 hidden sm:block">
+            <img src="images/team.jpg" alt="team photo" class="mt-0 ml-5 items-end">
+        </section>
+    </div>
+    <footer
+        class="flex-container text-white flex flex-wrap justify-between pr-12 bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 animate-wave">
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <pre>
+                We are really happy
+                to have you by our side,
+                happy to work with you!
+            </pre>
+        </section>
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <address>
+                <pre>
+                call us: 
+                    +251908030809 
+                    +251974977967 
+                    +251991478188 
+                </pre>
+            </address>
+            <section class="flex pl-12 ml-12 pt-12 pb-8 rounded-full">
+                <a href=https://t.me/LDT222><img class="w-12 h-12 mr-5 rounded-full" src="images/telegram.jpg"
+                        alt="telegram icon"></a>
+                <a href="https://instagram.com/_l_i_y_u_?igshid=OGQ5ZDc2ODk2ZA=="><img
+                        class="w-12 h-12 mr-5 rounded-full" src="images/instagram.jpg" alt="instagram icon"></a>
+                <a href="https://wa.me/qr/VB2TKESWYO2KP1"><img class="w-12 h-12 rounded-full" src="images/whatsapp.jpg"
+                        alt="whatsapp icon"></a>
+            </section>
+        </section>
+        <section class="pr-4 flex-shrink-0 mr-12">
+            <pre>
+                About us
+                Contact
+                Privacy policy
+                Help
+            </pre>
+        </section>
+    </footer>
+
+    <script>
+        async function login() {
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('passwordInput').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await response.json();
+
+                if (response.status === 201) {
+                    // Check user roles by making another request to a protected endpoint
+                    const userDetailsResponse = await fetch('http://localhost:3000/auth/user', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${data.access_token}`,
+                        },
+                    });
+
+                    const userDetails = await userDetailsResponse.json();
+                    console.log('User details:', userDetails);
+                    const userToken = data.access_token; // Replace this with the actual token
+
+                    localStorage.setItem('userToken', userToken);
+
+                    // Redirect the user based on their roles
+                    if (userDetails.roles && Array.isArray(userDetails.roles)) {
+                        if (userDetails.roles.includes('user')) {
+                            window.location.href = 'home.html';
+                        } else if (userDetails.roles.includes('admin')) {
+                            window.location.href = 'admin.html';
+                        } else {
+                            console.error('Unknown user role:', userDetails.roles);
+                            alert('An error occurred. Please try again.');
+                        }
+                    } else {
+                        console.error('Invalid or missing user roles:', userDetails.roles);
+                        alert('An error occurred. Please try again.');
+                    }
+                } else if (data.message) {
+                    // Display specific error message from the server
+                    console.error('Error during login:', data.message);
+                    alert(data.message);
+                } else {
+                    // No specific error message, do nothing
+                    console.error('Error during login. No specific error message from the server.');
+                }
+            } catch (error) {
+                // Display a generic error message
+                console.error('Error during login:', error);
+                alert('An error occurred during login. Please try again.');
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="./tailwind.config.js"></script>
+</body>
+
+</html>
