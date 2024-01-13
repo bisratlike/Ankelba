@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ankelba</title>
+    <link href="dist/tailwind.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 text-white py-12 flex justify-between items-center p-10">
+        <section class="pt-12">
+            <i class="text-4xl">Ankelba</i>
+        </section>
+        <section class="hidden lg:flex items-center space-x-3 pt-12 justify-center">
+            <a href="home.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Home</a>
+            <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+            <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-center justify-center">User's Dashboard</a>
+            <a href="about.html" class="w-24 hover:bg-green-600 flex items-center justify-center">About us</a>
+            <a href="contact.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Contact</a>
+        </section>
+        <section class="hidden lg:flex space-x-3 pt-12">
+            <a href="login.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Login</a>
+            <a href="signup.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Sign up</a>
+        </section>
+        <section class="lg:hidden flex flex-col items-end">
+            <button id="hamburger" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <section class="hidden flex-col items-end space-y-2" id="mobile-links">
+                <a href="home.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Home</a>
+                <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+                <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-start mr-12">User's Dashboard</a>
+                <a href="about.html" class="w-24 hover:bg-green-600 flex items-start mr-12">About us</a>
+                <a href="contact.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Contact</a>
+                <a href="login.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Login</a>
+                <a href="signup.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Sign up</a>
+            </section>
+        </section>
+    </header>
+    <main>
+        <section class="text-center p-6 pb-12 bg-gradient-to-b from-gray-300 via-gray-100 to-white-300">
+            <h1 class="font-bold text-3xl pt-4">WELCOME!</h1>
+            <p class="text-2xl font-bold p-6 pb-10">We believe in sharing what we have!</p>
+            <button class="bg-green-500 text-white text-xl w-24 mb-6"><a href="login.html">Join us</a></button>
+        </section>
+        <section class="bg-gray-300 md:w-3/4 mx-auto mb-12 pb-12">
+            <section class="flex flex-wrap ">
+                <section class="w-full md:w-1/6 pl-4 md:pl-12 mt-12 custom-mobile-spacing flex flex-col items-center justify-center">
+                    <section class="mt-12 pt-8 flex flex-wrap md:flex-col mx-auto">
+                        <a href="https://instagram.com/lamrotibsa?igshid=OGQ5ZDc2ODk2ZA=="><img src="images/instagram_icon.jpg" class="rounded-full mb-6 md:mb-6 sm:mr-5 sm:mb-4 " style="border-radius: 20%;" width="55" alt="instagram link"></a>
+                        <a href="https://t.me/lamrotibsa"><img src="images/telegram_icon.jpg" class="rounded-full mb-6 md:mb-6 sm:mr-5 sm:mb-4" width="60" alt="telegram link"></a>
+                        <a href="https://wa.me/qr/VB2TKESWYO2KP1"><img src="images/whatsapp_icon.png" class="rounded-full mb-6 md:mb-6 sm:mr-5 sm:mb-4" width="60" alt="whatsapp link"></a>
+                        <a href="mailto:lamrotibsa@gmail.com"><img src="images/gmail_icon.png" class="mb-6 md:mb-0 sm:mr-5 sm:mb-4" width="60" alt="email"></a>
+                        
+                    </section>
+                </section>
+                
+                <section class="w-full md:w-5/6">
+                    <section class="pt-8 text-center pb-4">
+                        <em class="text-xl text-center">feel free to contact us!</em>
+                    </section>
+                    <section>
+                        <form class="text-center mt-4 justify-center">
+                            <section class="flex flex-col justify-center md:flex-row mx-auto text-center md:mb-12 md:pb-12 items-center">
+                                <section class="flex w-3/4 flex-col items-center mb-4 md:mb-0">
+                                    <input type="text" id="fname" class="w-4/5 md:w-69 placeholder-black text-center mb-6 pt-2 pb-2" placeholder="First Name"> 
+                                    <input type="email" id="email" class="f_name w-4/5 md:w-65 pt-2 pb-2 placeholder-black text-center" placeholder="Email">
+                                </section>
+                                <section class="md:mt-0 md:ml-4 flex flex-col items-center w-3/4">
+                                    <input type="text" id="lname" class="f_name w-4/5 md:w-65 placeholder-black text-center mb-6 pt-2 pb-2" placeholder="Last Name">
+                                    <input type="number" id="number" class="f_name w-4/5 pt-2 pb-2 md:w-65 placeholder-black text-center" placeholder="Phone">
+                                </section>
+                            </section>
+                        
+                            <section class="mt-4 md:mt-12 pt-10 mb-12 pb-12 flex flex-col items-center ">
+                                <textarea
+                                    cols="65"
+                                    id="mess"
+                                    rows="5"
+                                    name="mes"
+                                    class="msg mb-4 placeholder-black text-center flex justify-center items-center"
+                                    placeholder="Comment"
+                                ></textarea>
+                        
+                                <input id="btn" type="submit" value="send" class="bg-green-500 w-24 text-white">
+                            </section>
+                        </form>
+                    </section>
+                   
+                    
+                </section>
+            </section>
+            
+        </section>
+       
+    </main>
+    <footer class="flex-container text-white flex flex-wrap justify-between pr-12 bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 animate-wave ">
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <pre>
+                We are really happy
+                to have you by our side,
+                happy to work with you!
+            </pre>
+        </section>
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <address>
+                <pre>
+                call us: 
+                    +251908030809 
+                    +251974977967 
+                    +251991478188 
+                </pre>
+            </address>
+            <section class="flex pl-12 ml-12 pt-12 pb-8 rounded-full">
+                <a href="https://t.me/LDT222"><img class="w-12 h-12 mr-5 rounded-full" src="images/telegram.jpg" alt="telegram icon"></a>
+                <a href="https://instagram.com/_l_i_y_u_?igshid=OGQ5ZDc2ODk2ZA=="><img class="w-12 h-12 mr-5 rounded-full" src="images/instagram.jpg" alt="instagram icon"></a>
+                <a  href="https://wa.me/qr/VB2TKESWYO2KP1"><img class="w-12 h-12 rounded-full" src="images/whatsapp.jpg" alt="whatsapp icon"></a>
+            </section>
+        </section>
+        <section class="pr-4 flex-shrink-0 mr-12">
+            <pre>
+                About us
+                Contact
+                Privacy policy
+                Help
+            </pre>
+        </section>
+    </footer>
+   <script src="script.js"></script>
+</body>
+</html>

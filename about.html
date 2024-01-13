@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ankelba</title>
+    <link href="dist/tailwind.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 text-white  py-12 flex justify-between items-center p-10">
+        <section class="pt-12">
+            <i class="text-4xl">Ankelba</i>
+        </section>
+        <section class="hidden lg:flex items-center space-x-3 pt-12 justify-center">
+            <a href="home.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Home</a>
+            <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+            <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-center justify-center">User's Dashboard</a>
+            <a href="about.html" class="w-24 hover:bg-green-600 flex items-center justify-center">About us</a>
+            <a href="contact.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Contact</a>
+        </section>
+        <section class="hidden lg:flex space-x-3 pt-12">
+            <a href="login.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Login</a>
+            <a href="signup.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Sign up</a>
+        </section>
+        <section class="lg:hidden flex flex-col items-end">
+            <button id="hamburger" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <section class="hidden flex flex-col items-end space-y-2" id="mobile-links">
+                <a href="home.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Home</a>
+                <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+                <a href="users-dashboard.html" class="w-24 hover:bg-green-600 flex items-start mr-12">User's Dashboard</a>
+                <a href="about.html" class="w-24 hover:bg-green-600 flex items-start mr-12">About us</a>
+                <a href="contact.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Contact</a>
+                <a href="login.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Login</a>
+                <a href="signup.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Sign up</a>
+            </section>
+        </section>
+    </header>
+    <main>
+        <section class="text-center p-6 pb-12 bg-gradient-to-b from-gray-300 via-gray-100 to-white-300">
+            <h1 class="font-bold text-3xl pt-4">WELCOME!</h1>
+            <p class="text-2xl font-bold p-6 pb-10">We believe in sharing what we have!</p>
+            <button class="bg-green-500 text-white text-xl w-24 mb-6"><a href="login.html">Join us</a></button>
+        </section>
+        <section class="w-8/12 mx-auto mb-12 pb-12">
+            <div class="relative">
+                <ul id="slider" class="flex">
+                    <li class="h-[50vh] relative flex items-center bg-gray-300 ">
+                        <div class="w-1/2">
+                            <p class="text-center p-6">"Ankelba" derives from the Amharic language, where it signifies an Ethiopian traditional leather product that employed for carrying infants and toddlers by Ethiopian mothers. We have chosen this name as it aptly aligns with the core principles of our project, which is rooted in the notion of resource sharing. Many individuals possess a strong desire to assist others, but lack financial means. However, they do possess valuable knowledge, energy, and free time. Our project is dedicated to harnessing these capabilities and channeling them towards meaningful pursuits. Ankelba serves as a platform where individuals willingly shoulder the burdens of others by leveraging their own skills and resources. It exemplifies our project's mission and encapsulates the essence of why we named it "Ankelba."</p>
+                        </div>
+                        <img class="w-1/2 h-full object-cover" src="images/Ankelba.jpg" alt="cat">
+                    </li>
+                    <li class="h-[50vh] relative flex items-center hidden bg-gray-300">
+                        <div class="w-1/2">
+                            <p class="text-center p-6">Welcome to Ankelba, a platform that seeks to connect individuals with a shared passion for volunteering. We understand that many people possess a genuine desire to contribute their time and skills to meaningful causes, yet struggle to find suitable volunteer opportunities. Simultaneously, volunteer organizers often face challenges in reaching out to potential volunteers and informing them about available opportunities. This disconnect leads to missed chances for both volunteers and organizers, hindering the progress of valuable projects.
+
+                                At Ankelba, we serve as a vital conduit between volunteer organizers and eager volunteers. Our mission is to bridge this gap and foster a harmonious collaboration. Through our platform, volunteer organizers can easily showcase their legitimate volunteer opportunities, ensuring a wider reach and greater awareness. We invite organizers from diverse fields to share their projects, knowing that our platform is here to support their efforts.</p>
+                        </div>
+                        <img class="w-1/2 h-full  object-cover" src="images/volunteers.jpg" alt="cat">
+                    </li>
+                    <li class="h-[50vh] relative flex items-center hidden bg-gray-300">
+                        <div class="w-1/2">
+                            <p class="text-center p-6">Equally, we extend a warm invitation to passionate individuals like you, who are ready to make a difference. Ankelba welcomes volunteers from all walks of life, valuing the unique skills and perspectives each person brings. Whether you have an abundance of time or a specific talent to offer, we embrace your generosity and dedication.
+
+                                Together, let us create a vibrant community where volunteer opportunities flourish, and volunteers find their rightful place. Ankelba is committed to empowering both organizers and volunteers, enriching lives, and creating lasting positive change. Join us on this inspiring journey, as we unlock the potential of collective action and transform aspirations into impactful realities.</p>
+                        </div>
+                        <img class="w-1/2 h-full object-cover" src="images/be volunteer.png" alt="cat">
+                    </li>
+                </ul>
+        
+                <div class="absolute px-5 flex h-full w-full top-0 left-0">
+                    <div class="my-auto w-full flex justify-between">
+                        <button onclick="prev()" class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg">
+                            <p class="text-3xl"> < </p>
+                        </button>
+                        <button onclick="next()" class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg">
+                            <p class="text-3xl">></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex-container text-white flex flex-wrap justify-between pr-12 bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 animate-wave ">
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <pre>
+                We are really happy
+                to have you by our side,
+                happy to work with you!
+            </pre>
+        </section>
+        <section class="w-full sm:w-auto flex-shrink-0">
+            <address>
+                <pre>
+                call us: 
+                    +251908030809 
+                    +251974977967 
+                    +251991478188 
+                </pre>
+            </address>
+            <section class="flex pl-12 ml-12 pt-12 pb-8 rounded-full">
+                <a href="https://t.me/LDT222"><img class="w-12 h-12 mr-5 rounded-full" src="images/telegram.jpg" alt="telegram icon"></a>
+                <a href="https://instagram.com/_l_i_y_u_?igshid=OGQ5ZDc2ODk2ZA=="><img class="w-12 h-12 mr-5 rounded-full" src="images/instagram.jpg" alt="instagram icon"></a>
+                <a  href="https://wa.me/qr/VB2TKESWYO2KP1"><img class="w-12 h-12 rounded-full" src="images/whatsapp.jpg" alt="whatsapp icon"></a>
+            </section>
+        </section>
+        <section class="pr-4 flex-shrink-0 mr-12">
+            <pre>
+                About us
+                Contact
+                Privacy policy
+                Help
+            </pre>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
