@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Album</title>
+    <link href="dist/tailwind.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 text-white font-bold py-12 flex justify-between items-center p-10">
+        <section class="pt-12">
+            <i class="text-4xl">Ankelba</i>
+        </section>
+
+        <section class="hidden lg:flex items-center pt-12 justify-center">
+            <p class="text-center">
+                Serving The Society, Standing For Good!
+            </p>
+        </section>
+
+        <section class="hidden lg:flex space-x-3 pt-12">
+            <a href="admin.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Admin's Dashboard</a>
+            <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+            <a href="login.html" class="w-24 hover:bg-green-600 flex items-center justify-center">Login</a>
+        </section>
+
+        <section class="lg:hidden flex flex-col items-end">
+            <button id="hamburger" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden flex flex-col items-end space-y-2" id="mobile-links">
+                <a href="admin.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Admin's Dashboard</a>
+                <a href="profile.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Profile</a>
+                <a href="login.html" class="w-24 hover:bg-green-600 flex items-start mr-12">Login</a>
+            </div>
+        </section>
+    </header>
+
+    <button class="block mx-auto bg-green-500 hover:bg-blue-600 text-white px-4 py-2 mt-4" onclick="openModal()">Create New Album</button>
+
+    <section id="containerid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Cards will be dynamically added here -->
+    </section>
+    <div id="myModal" class="modal hidden">
+        <form id="editForm" class="flex flex-col p-4 bg-white rounded-lg shadow-lg" onsubmit="addMusic(event)">
+            <label class="text-lg font-semibold mb-2" for="title">Music Title:</label>
+            <input class="border rounded p-2 mb-4" type="text" id="title" name="title" required>
+            <label class="text-lg font-semibold mb-2" for="photo">Music Photo URL:</label>
+            <input class="border rounded p-2 mb-4" type="file" id="photo" name="photo" required>
+            <label class="text-lg font-semibold mb-2" for="date">Release Date:</label>
+            <input class="border rounded p-2 mb-4" type="date" id="date" name="date" required>
+            <label class="text-lg font-semibold mb-2" for="location">Location:</label>
+            <input class="border rounded p-2 mb-4" type="text" id="location" name="location" required>
+            <label class="text-lg font-semibold mb-2" for="description">Description:</label>
+            <textarea class="border rounded p-2 mb-4" id="description" name="description" required></textarea>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4 self-center" type="submit" id="addButton" >ADD</button>
+        </form>
+    </div>
+    <div id="overlay" class="overlay hidden" onclick="closeModal()"></div>
+
+    <div id="editmyModal" class="modal hidden ">
+        <form onsubmit="event.preventDefault(); submitForm(editMusicId, document.getElementById('editTitle').value, document.getElementById('editPhoto').value, document.getElementById('editDate').value, document.getElementById('editDescription').value)" class="flex flex-col p-4 bg-white rounded-lg shadow-lg">
+            <label class="text-lg font-semibold mb-2" for="editTitle">Music Title:</label>
+            <input class="border rounded p-2 mb-4" type="text" id="editTitle" name="title" required>
+            <label class="text-lg font-semibold mb-2" for="editPhoto">Music Photo URL:</label>
+            <input class="border rounded p-2 mb-4" type="file" id="editPhoto" name="photo" required>
+            <label class="text-lg font-semibold mb-2" for="editDate">Release Date:</label>
+            <input class="border rounded p-2 mb-4" type="date" id="editDate" name="date" required>
+            <label class="text-lg font-semibold mb-2" for="editLocation">Location:</label>
+            <input class="border rounded p-2 mb-4" type="text" id="editLocation" name="location" required>
+            <label class="text-lg font-semibold mb-2" for="editDescription">Description:</label>
+            <textarea class="border rounded p-2 mb-4" id="editDescription" name="description" required></textarea>
+            
+            <!-- Place the buttons side by side -->
+            <div class="flex justify-between">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" type="submit">Edit</button>
+                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" onclick="deleteOpportunity('${opportunity._id}')">Delete</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="editoverlay" class="overlay hidden" onclick="editCloseModal()"></div>
+        <footer class="flex-container text-white flex flex-wrap justify-between pr-12 bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300 animate-wave">
+            <section class="w-full sm:w-auto flex-shrink-0">
+                <pre>
+                    We are really happy
+                    to have you by our side,
+                    happy to work with you!
+                </pre>
+            </section>
+            <section class="w-full sm:w-auto flex-shrink-0">
+                <address>
+                    <pre>
+                    call us: 
+                        +251908030809 
+                        +251974977967 
+                        +251991478188 
+                    </pre>
+                </address>
+                <section class="flex pl-12 ml-12 pt-12 pb-8 rounded-full">
+                    <a href=https://t.me/LDT222><img class="w-12 h-12 mr-5 rounded-full" src="images/telegram.jpg" alt="telegram icon"></a>
+                    <a href="https://instagram.com/_l_i_y_u_?igshid=OGQ5ZDc2ODk2ZA=="><img class="w-12 h-12 mr-5 rounded-full" src="images/instagram.jpg" alt="instagram icon"></a>
+                    <a  href="https://wa.me/qr/VB2TKESWYO2KP1"><img class="w-12 h-12 rounded-full" src="images/whatsapp.jpg" alt="whatsapp icon"></a>
+                </section>
+            </section>
+            <section class="pr-4 flex-shrink-0 mr-12">
+                <pre>
+                    About us
+                    Contact
+                    Privacy policy
+                    Help
+                </pre>
+            </section>
+        </footer>
+   
+
+
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
